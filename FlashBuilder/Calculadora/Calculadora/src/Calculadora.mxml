@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	
+	<fx:Script>
+		<![CDATA[
+			
+			import mx.controls.Alert;
+			var activar:Boolean = false;
+			// Evento para el boton reiniciar
+			protected function botonReiniciar_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				cateto1.text = "";
+				cateto2.text = "";
+				hipotenusa.text = "";
+				
+			}
+			
+			protected function botonLogin_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				//var logeo: String = login.text();
+				//var contraseña: String = password.text();
+				
+				if(login.text == "" || password.text == "" || login.text != password.text)
+					{
+					Alert.show('Tienes un error en el login', 'ERROR', mx.controls.Alert.OK);
+				}else
+				{
+				panelCalculadora.enabled = true;
+				login.editable = false;
+				password.editable = false;
+				radioCalculadora.enabled = true;
+				radioPitagoras.enabled = true;
+				activar = true;
+				}
+			}
+			
+			protected function botonLogout_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				panelCalculadora.enabled = false;
+				panelPitagoras.enabled = false;
+				login.text = "";
+				password.text = "";
+				
+				/*Alert.show('Salir ', '¿Realmente desea salir?', Alert.OK | Alert.CANCEL, this , exit_app);
+				
+				public function exit_app(event:CloseEvent): void
+				{
+					if (event.detail == Alert.OK)
+					{
+						panelCalculadora.enabled = false;
+						panelPitagoras.enabled = false;
+						login.text = "";
+						password.text = "";	
+				}*/
+				
+			}
+			
+			
+			 protected function radioPitagoras_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(radioPitagoras.enabled && activar == true)
+				{
+					panelCalculadora.enabled = false
+					panelPitagoras.enabled = true;
+				}		
+			}
+			
+			protected function imagen_clickHandler(event:MouseEvent):void
+			{
+			// TODO Auto-generated method stub
+				var resultado: int;
+				var num1: int
+				var num2: int
+				
+				num1 = parseInt(cateto1.text);
+				num2 = parseInt(cateto2.text);
+			
+			//resultado = Math.sqrt(Math.pow(num1,2) + Math.pow(num2,2));
+			hipotenusa.text = Math.sqrt((Math.pow(num1,2) + Math.pow(num2,2))).toString().valueOf();
+			//hipotenusa.text = resultado.toString(resultado);
+			}
+			
+			protected function radioCalculadora_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(radioCalculadora.enabled && activar == true)
+				{
+					panelCalculadora.enabled = true;
+					panelPitagoras.enabled = false;
+			}
+			}
+			
+			protected function boton1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "1";
+			}
+			
+			protected function boton2_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "2";
+			}
+			
+			protected function boton3_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "3";
+			}
+			
+			protected function boton4_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "4";
+			}
+			
+			protected function boton5_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "5";
+			}
+			
+			protected function boton6_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "6";
+			}
+			
+			protected function boton7_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "7";
+			}
+			
+			protected function boton8_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "8";
+			}
+			
+			protected function boton9_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "9";
+			}
+			
+			protected function boton0_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "0";
+			}
+			
+			protected function botonC_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text = "";
+				textCalculadora.text = "";
+			}
+			
+			protected function botonMas_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "+";
+			}
+			
+			protected function botonMenos_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "-";
+			}
+			
+			protected function botonMultiplicar_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "*";
+			}
+			
+			protected function BotonDividir_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				arribaCalculadora.text += "/";
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Panel id="panelLogueo" x="33" y="27" width="391" height="200" title="Acceso">
+		<s:TextInput id="login" x="24" y="15" width="193" height="36" prompt="Login"/>
+		<s:TextInput id="password" x="24" y="59" width="193" height="38" displayAsPassword="true"
+					 prompt="Password"/>
+		<s:Label x="244" y="31" width="55" height="15" fontSize="15" text="Activar:"/>
+		<s:RadioButton id="radioCalculadora" x="244" y="54" width="94" label="Calculadora"
+					   click="radioCalculadora_clickHandler(event)" enabled="true"
+					   groupName="activar" selected="true"/>
+		<s:RadioButton id="radioPitagoras" x="244" y="80" width="94" label="Pitágoras"
+					   click="radioPitagoras_clickHandler(event)" enabled="true" groupName="activar"/>
+		<s:Button id="botonLogin" x="94" y="121" width="93" height="27" label="Login"
+				  click="botonLogin_clickHandler(event)"/>
+		<s:Button id="botonLogout" x="207" y="121" width="92" height="27" label="Logout"
+				  click="botonLogout_clickHandler(event)"/>
+	</s:Panel>
+	<s:Panel id="panelPitagoras" x="32" y="251" width="392" height="208" enabled="false"
+			 title="Teorema de Pitágoras">
+		<s:Image id="imagen" x="10" y="10" width="217" height="177" scaleMode="letterbox"
+				 source="assets/triangulo.png"/>
+		<s:Button id="botonReiniciar" x="235" y="-25" width="145" label="Reiniciar"
+				  click="botonReiniciar_clickHandler(event)"/>
+		<s:TextInput id="cateto1" x="235" y="10" width="145" height="41" prompt="Cateto 1"/>
+		<s:TextInput id="cateto2" x="235" y="59" width="145" height="41" prompt="Cateto 2"/>
+		<s:TextInput id="hipotenusa" x="235" y="108" width="145" height="41" prompt="Hipotenusa"/>
+	</s:Panel>
+	<s:Panel id="panelCalculadora" x="439" y="29" width="328" height="431" enabled="false"
+			 title="Calculadora Sencilla">
+		<s:TextInput id="arribaCalculadora" x="10" y="19" width="306" height="28" textAlign="right"/>
+		<s:TextInput id="textCalculadora" x="10" y="55" width="306" height="57" textAlign="right"/>
+		<s:Button x="10" y="120" height="60" label="1" fontSize="36"/>
+		<s:Button x="10" y="120" height="60" label="1" fontSize="36"/>
+		<s:Button id="boton1" x="10" y="120" height="60" label="1" click="boton1_clickHandler(event)"
+				  fontSize="36"/>
+		<s:Button id="boton2" x="88" y="120" height="60" label="2" click="boton2_clickHandler(event)"
+				  fontSize="36"/>
+		<s:Button id="boton3" x="166" y="120" height="60" label="3"
+				  click="boton3_clickHandler(event)" fontSize="36"/>
+		<s:Button id="botonMas" x="244" y="120" height="60" label="+"
+				  click="botonMas_clickHandler(event)" fontSize="36"/>
+		<s:Button id="boton4" x="10" y="188" height="60" label="4" click="boton4_clickHandler(event)"
+				  fontSize="36"/>
+		<s:Button id="boton5" x="88" y="188" height="60" label="5" click="boton5_clickHandler(event)"
+				  fontSize="36"/>
+		<s:Button id="boton6" x="166" y="188" height="60" label="6"
+				  click="boton6_clickHandler(event)" fontSize="36"/>
+		<s:Button id="botonMenos" x="246" y="188" height="60" label="-"
+				  click="botonMenos_clickHandler(event)" fontSize="36"/>
+		<s:Button id="boton7" x="10" y="256" height="60" label="7" click="boton7_clickHandler(event)"
+				  fontSize="36"/>
+		<s:Button id="boton8" x="88" y="256" height="60" label="8" click="boton8_clickHandler(event)" fontSize="36"/>
+		<s:Button id="boton9" x="166" y="256" height="60" label="9" click="boton9_clickHandler(event)" fontSize="36"/>
+		<s:Button id="botonMultiplicar" x="246" y="256" height="60" label="X"
+				  click="botonMultiplicar_clickHandler(event)" fontSize="36"/>
+		<s:Button id="botonC" x="10" y="324" height="60" label="C" click="botonC_clickHandler(event)"
+				  fontSize="36"/>
+		<s:Button id="boton0" x="88" y="324" height="60" label="0" click="boton0_clickHandler(event)" fontSize="36"/>
+		<s:Button id="botonIgual" x="166" y="324" height="60" label="=" fontSize="36"/>
+		<s:Button id="BotonDividir" x="246" y="324" height="60" label="/"
+				  click="BotonDividir_clickHandler(event)" fontSize="36"/>
+	</s:Panel>
+</s:Application>

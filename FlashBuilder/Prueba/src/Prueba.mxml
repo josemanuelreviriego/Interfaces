@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955" minHeight="600" pageTitle="MI PRIMERA PAGINA">
+	
+	<fx:Script>
+		<![CDATA[
+			import spark.events.IndexChangeEvent;
+			import spark.events.TextOperationEvent;
+			protected function boton1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				textArea.setStyle("contentBackgroundColor","red");
+			}
+			
+			protected function texto1_changeHandler(event:TextOperationEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+			
+			protected function textarea1_changeHandler(event:TextOperationEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+			
+			protected function checkBox_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+				if(checkBox.selected == true)
+					textArea.text = "Chequeado";
+				else
+					textArea.text = "No chequeado";
+				
+			}
+			
+			protected function comboBox_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				textArea.text = comboBox.selectedItem;
+				
+			}
+			
+			protected function radiobutton1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.setStyle("backgroundColor", "blue");
+				
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:RadioButtonGroup id="radiogroup1"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Button id="boton1" x="283" y="206" label="Pulsame" click="boton1_clickHandler(event)"/>
+	<s:TextInput id="texto1" x="375" y="206" change="texto1_changeHandler(event)"
+				 prompt="Escriba su usuario"/>
+	<s:TextArea id="textArea" x="527" y="206" change="textarea1_changeHandler(event)"/>
+	<s:HScrollBar x="522" y="366" width="188"/>
+	<s:ComboBox id="comboBox" x="283" y="255" change="comboBox_changeHandler(event)">
+		<s:ArrayList>
+			
+			<fx:String>Agustin</fx:String>
+			<fx:String>Damian</fx:String>
+			<fx:String>Pepe</fx:String>
+		</s:ArrayList>
+	</s:ComboBox>
+	<s:CheckBox id="checkBox" x="283" y="298" label="Pulse aqui" click="checkBox_clickHandler(event)"
+				selected="true"/>
+	<s:Label x="283" y="235" text="Label"/>
+	<s:RadioButton id="hombre" x="283" y="334" label="Hombre"
+				   click="radiobutton1_clickHandler(event)" selected="true"/>
+	<s:RadioButton id="mujer" x="283" y="360" label="Mujer"/>
+	<s:VGroup x="283" y="334">
+	</s:VGroup>
+	<s:RadioButton x="359" y="358" label="Button 2" groupName="radiogroup1"/>
+	<s:RadioButton x="359" y="334" label="Button 1" groupName="radiogroup1"/>
+	<s:Image id="imagen" x="283" y="399" width="140" height="83" source="assets/porsche-911.jpg"/>
+		
+</s:Application>
