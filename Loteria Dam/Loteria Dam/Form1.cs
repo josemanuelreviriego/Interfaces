@@ -22,7 +22,7 @@ namespace Loteria_Dam
         {
             if (dateTimePicker1.Value < DateTime.Today)
             {
-                string mensaje = "“No se puede participar en un sorteo anterior";
+                string mensaje = "No se puede participar en un sorteo anterior";
                 string titulo = "Error en datos";
                 MessageBoxButtons opciones = MessageBoxButtons.OK;
                 DialogResult result = MessageBox.Show(mensaje, titulo, opciones, MessageBoxIcon.Information);
@@ -47,5 +47,6 @@ namespace Loteria_Dam
                 this.Close();
             }
         }
-    }
+
+        
 }

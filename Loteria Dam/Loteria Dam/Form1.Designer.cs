@@ -152,19 +152,19 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(289, 167);
+            this.textBox2.Location = new System.Drawing.Point(300, 162);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(56, 20);
+            this.textBox2.Size = new System.Drawing.Size(45, 20);
             this.textBox2.TabIndex = 34;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 167);
+            this.label5.Location = new System.Drawing.Point(198, 167);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.Size = new System.Drawing.Size(101, 13);
             this.label5.TabIndex = 33;
-            this.label5.Text = "Nº Reintegro[1-10]:";
+            this.label5.Text = "Nº Reintegro [1-10]:";
             // 
             // checkBox16
             // 
