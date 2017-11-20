@@ -18,6 +18,34 @@ namespace Loteria_Dam
             tipoApuesta.SelectedIndex = -1;
         }
 
-        
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTimePicker1.Value < DateTime.Today)
+            {
+                string mensaje = "“No se puede participar en un sorteo anterior";
+                string titulo = "Error en datos";
+                MessageBoxButtons opciones = MessageBoxButtons.OK;
+                DialogResult result = MessageBox.Show(mensaje, titulo, opciones, MessageBoxIcon.Information);
+                
+
+
+            }
+            
+               
+               
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string mensaje = "¿Realmente desea salir?";
+            string titulo = "Salir";
+            MessageBoxButtons opciones = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(mensaje, titulo, opciones, MessageBoxIcon.Question);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

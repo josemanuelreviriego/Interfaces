@@ -13,3 +13,9 @@ J:\DAM 2017-2018\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.pdb
 E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe.config
 E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.exe
 E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.pdb
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.pdb
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csprojResolveAssemblyReference.cache
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Form1.resources
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Properties.Resources.resources
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csproj.GenerateResource.Cache
