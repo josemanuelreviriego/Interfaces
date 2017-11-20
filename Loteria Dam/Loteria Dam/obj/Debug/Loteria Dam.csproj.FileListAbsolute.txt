@@ -1,0 +1,15 @@
+c:\users\cfgs\documents\visual studio 2015\Projects\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe.config
+c:\users\cfgs\documents\visual studio 2015\Projects\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csprojResolveAssemblyReference.cache
+c:\users\cfgs\documents\visual studio 2015\Projects\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Form1.resources
+c:\users\cfgs\documents\visual studio 2015\Projects\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Properties.Resources.resources
+c:\users\cfgs\documents\visual studio 2015\Projects\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csproj.GenerateResource.Cache
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.pdb
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.exe
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.pdb
+J:\DAM 2017-2018\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe.config
+J:\DAM 2017-2018\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.exe
+J:\DAM 2017-2018\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.pdb
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe.config
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.exe
+E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.pdb
