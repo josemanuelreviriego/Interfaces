@@ -34,7 +34,7 @@
             this.tipoApuesta = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textReintegro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
@@ -58,10 +58,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxResguardo = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxResguardo.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -117,7 +117,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textReintegro);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.checkBox16);
             this.groupBox1.Controls.Add(this.checkBox15);
@@ -151,12 +151,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "APUESTA DE LOTERIA";
             // 
-            // textBox2
+            // textReintegro
             // 
-            this.textBox2.Location = new System.Drawing.Point(300, 162);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(45, 20);
-            this.textBox2.TabIndex = 34;
+            this.textReintegro.Location = new System.Drawing.Point(300, 162);
+            this.textReintegro.Name = "textReintegro";
+            this.textReintegro.Size = new System.Drawing.Size(45, 20);
+            this.textReintegro.TabIndex = 34;
             // 
             // label5
             // 
@@ -360,6 +360,7 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "Validar apuesta >>";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dateTimePicker1
             // 
@@ -401,17 +402,18 @@
             this.radioButton1.Text = "Manual";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // groupBoxResguardo
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(391, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(197, 233);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "RESGUARDO";
+            this.groupBoxResguardo.Controls.Add(this.textBox1);
+            this.groupBoxResguardo.Controls.Add(this.button2);
+            this.groupBoxResguardo.Controls.Add(this.button1);
+            this.groupBoxResguardo.Enabled = false;
+            this.groupBoxResguardo.Location = new System.Drawing.Point(391, 13);
+            this.groupBoxResguardo.Name = "groupBoxResguardo";
+            this.groupBoxResguardo.Size = new System.Drawing.Size(197, 233);
+            this.groupBoxResguardo.TabIndex = 12;
+            this.groupBoxResguardo.TabStop = false;
+            this.groupBoxResguardo.Text = "RESGUARDO";
             // 
             // textBox1
             // 
@@ -426,15 +428,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 226);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBoxResguardo);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Loterias DAM";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxResguardo.ResumeLayout(false);
+            this.groupBoxResguardo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -452,9 +454,9 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxResguardo;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textReintegro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox checkBox15;

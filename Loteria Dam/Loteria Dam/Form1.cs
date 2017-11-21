@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace Loteria_Dam
 {
+    
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
             tipoApuesta.SelectedIndex = -1;
+            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -30,9 +32,6 @@ namespace Loteria_Dam
 
 
             }
-
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,6 +53,7 @@ namespace Loteria_Dam
         {
             if (tipoApuesta.Text == "SIMPLE")
             {
+                Random r = new Random();
                 checkBox1.Enabled = true;
                 checkBox2.Enabled = true;
                 checkBox3.Enabled = true;
@@ -70,9 +70,57 @@ namespace Loteria_Dam
                 checkBox14.Enabled = true;
                 checkBox15.Enabled = true;
                 checkBox16.Enabled = true;
+                textReintegro.Text = r.Next(1,11).ToString();
 
+            }else if(tipoApuesta.Text == "MULTIPLE")
+            {
+                Random r = new Random();
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+                checkBox4.Enabled = true;
+                checkBox5.Enabled = true;
+                checkBox6.Enabled = true;
+                checkBox7.Enabled = true;
+                checkBox8.Enabled = true;
+                checkBox9.Enabled = true;
+                checkBox10.Enabled = true;
+                checkBox11.Enabled = true;
+                checkBox12.Enabled = true;
+                checkBox13.Enabled = true;
+                checkBox14.Enabled = true;
+                checkBox15.Enabled = true;
+                checkBox16.Enabled = true;
+                textReintegro.Text = r.Next(1, 11).ToString();
 
             }
+            else if(tipoApuesta.Text == "EXTREMA")
+            {
+                Random r = new Random();    
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+                checkBox4.Enabled = true;
+                checkBox5.Enabled = true;
+                checkBox6.Enabled = true;
+                checkBox7.Enabled = true;
+                checkBox8.Enabled = true;
+                checkBox9.Enabled = true;
+                checkBox10.Enabled = true;
+                checkBox11.Enabled = true;
+                checkBox12.Enabled = true;
+                checkBox13.Enabled = true;
+                checkBox14.Enabled = true;
+                checkBox15.Enabled = true;
+                checkBox16.Enabled = true;
+                textReintegro.Text = r.Next(1, 11).ToString();
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            groupBoxResguardo.Enabled = true;
         }
     }
 }
