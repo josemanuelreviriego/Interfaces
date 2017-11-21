@@ -19,3 +19,12 @@ E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csprojResolve
 E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Form1.resources
 E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Properties.Resources.resources
 E:\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csproj.GenerateResource.Cache
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe.config
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.exe
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.pdb
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csprojResolveAssemblyReference.cache
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Form1.resources
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria_Dam.Properties.Resources.resources
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\obj\Debug\Loteria Dam.csproj.GenerateResource.Cache
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.exe
+C:\Users\CFGS\Documents\GitHub\Interfaces\Loteria Dam\Loteria Dam\bin\Debug\Loteria Dam.pdb

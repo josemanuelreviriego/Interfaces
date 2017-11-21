@@ -25,14 +25,14 @@ namespace Loteria_Dam
                 string mensaje = "No se puede participar en un sorteo anterior";
                 string titulo = "Error en datos";
                 MessageBoxButtons opciones = MessageBoxButtons.OK;
-                DialogResult result = MessageBox.Show(mensaje, titulo, opciones, MessageBoxIcon.Information);
-                
+                DialogResult result = MessageBox.Show(mensaje, titulo, opciones, MessageBoxIcon.Error);
+                dateTimePicker1.Text = "";
 
 
             }
-            
-               
-               
+
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,7 +46,34 @@ namespace Loteria_Dam
             {
                 this.Close();
             }
+
+           
         }
 
-        
+        private void tipoApuesta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tipoApuesta.Text == "SIMPLE")
+            {
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+                checkBox4.Enabled = true;
+                checkBox5.Enabled = true;
+                checkBox6.Enabled = true;
+                checkBox7.Enabled = true;
+                checkBox8.Enabled = true;
+                checkBox9.Enabled = true;
+                checkBox10.Enabled = true;
+                checkBox11.Enabled = true;
+                checkBox12.Enabled = true;
+                checkBox13.Enabled = true;
+                checkBox14.Enabled = true;
+                checkBox15.Enabled = true;
+                checkBox16.Enabled = true;
+
+
+            }
+        }
+    }
 }
+
