@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.botonApostar = new System.Windows.Forms.Button();
+            this.botonSalir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tipoApuesta = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxApuesta = new System.Windows.Forms.GroupBox();
             this.textReintegro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
@@ -53,35 +53,36 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.botonValidar = new System.Windows.Forms.Button();
+            this.calendario = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioAutomatico = new System.Windows.Forms.RadioButton();
+            this.radioManual = new System.Windows.Forms.RadioButton();
             this.groupBoxResguardo = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxApuesta.SuspendLayout();
             this.groupBoxResguardo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // botonApostar
             // 
-            this.button1.Location = new System.Drawing.Point(18, 170);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Apostar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botonApostar.Location = new System.Drawing.Point(18, 170);
+            this.botonApostar.Name = "botonApostar";
+            this.botonApostar.Size = new System.Drawing.Size(87, 23);
+            this.botonApostar.TabIndex = 1;
+            this.botonApostar.Text = "Apostar";
+            this.botonApostar.UseVisualStyleBackColor = true;
+            this.botonApostar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // botonSalir
             // 
-            this.button2.Location = new System.Drawing.Point(111, 170);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.botonSalir.Location = new System.Drawing.Point(111, 170);
+            this.botonSalir.Name = "botonSalir";
+            this.botonSalir.Size = new System.Drawing.Size(68, 23);
+            this.botonSalir.TabIndex = 2;
+            this.botonSalir.Text = "Salir";
+            this.botonSalir.UseVisualStyleBackColor = true;
+            this.botonSalir.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -109,47 +110,48 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Enabled = false;
             this.label3.Location = new System.Drawing.Point(23, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tipo:";
             // 
-            // groupBox1
+            // groupBoxApuesta
             // 
-            this.groupBox1.Controls.Add(this.textReintegro);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.checkBox16);
-            this.groupBox1.Controls.Add(this.checkBox15);
-            this.groupBox1.Controls.Add(this.checkBox14);
-            this.groupBox1.Controls.Add(this.checkBox13);
-            this.groupBox1.Controls.Add(this.checkBox12);
-            this.groupBox1.Controls.Add(this.checkBox11);
-            this.groupBox1.Controls.Add(this.checkBox10);
-            this.groupBox1.Controls.Add(this.checkBox9);
-            this.groupBox1.Controls.Add(this.checkBox8);
-            this.groupBox1.Controls.Add(this.checkBox7);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.tipoApuesta);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 13);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 233);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "APUESTA DE LOTERIA";
+            this.groupBoxApuesta.Controls.Add(this.textReintegro);
+            this.groupBoxApuesta.Controls.Add(this.label5);
+            this.groupBoxApuesta.Controls.Add(this.checkBox16);
+            this.groupBoxApuesta.Controls.Add(this.checkBox15);
+            this.groupBoxApuesta.Controls.Add(this.checkBox14);
+            this.groupBoxApuesta.Controls.Add(this.checkBox13);
+            this.groupBoxApuesta.Controls.Add(this.checkBox12);
+            this.groupBoxApuesta.Controls.Add(this.checkBox11);
+            this.groupBoxApuesta.Controls.Add(this.checkBox10);
+            this.groupBoxApuesta.Controls.Add(this.checkBox9);
+            this.groupBoxApuesta.Controls.Add(this.checkBox8);
+            this.groupBoxApuesta.Controls.Add(this.checkBox7);
+            this.groupBoxApuesta.Controls.Add(this.checkBox6);
+            this.groupBoxApuesta.Controls.Add(this.checkBox5);
+            this.groupBoxApuesta.Controls.Add(this.checkBox4);
+            this.groupBoxApuesta.Controls.Add(this.checkBox3);
+            this.groupBoxApuesta.Controls.Add(this.checkBox2);
+            this.groupBoxApuesta.Controls.Add(this.checkBox1);
+            this.groupBoxApuesta.Controls.Add(this.label1);
+            this.groupBoxApuesta.Controls.Add(this.botonValidar);
+            this.groupBoxApuesta.Controls.Add(this.calendario);
+            this.groupBoxApuesta.Controls.Add(this.label4);
+            this.groupBoxApuesta.Controls.Add(this.radioAutomatico);
+            this.groupBoxApuesta.Controls.Add(this.radioManual);
+            this.groupBoxApuesta.Controls.Add(this.tipoApuesta);
+            this.groupBoxApuesta.Controls.Add(this.label2);
+            this.groupBoxApuesta.Controls.Add(this.label3);
+            this.groupBoxApuesta.Location = new System.Drawing.Point(12, 13);
+            this.groupBoxApuesta.Name = "groupBoxApuesta";
+            this.groupBoxApuesta.Size = new System.Drawing.Size(373, 233);
+            this.groupBoxApuesta.TabIndex = 11;
+            this.groupBoxApuesta.TabStop = false;
+            this.groupBoxApuesta.Text = "APUESTA DE LOTERIA";
             // 
             // textReintegro
             // 
@@ -352,61 +354,68 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Elija sus numeros de apuesta:";
             // 
-            // button3
+            // botonValidar
             // 
-            this.button3.Location = new System.Drawing.Point(16, 162);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Validar apuesta >>";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.botonValidar.Enabled = false;
+            this.botonValidar.Location = new System.Drawing.Point(16, 162);
+            this.botonValidar.Name = "botonValidar";
+            this.botonValidar.Size = new System.Drawing.Size(144, 23);
+            this.botonValidar.TabIndex = 15;
+            this.botonValidar.Text = "Validar apuesta >>";
+            this.botonValidar.UseVisualStyleBackColor = true;
+            this.botonValidar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dateTimePicker1
+            // calendario
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(61, 122);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.calendario.Enabled = false;
+            this.calendario.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.calendario.Location = new System.Drawing.Point(61, 122);
+            this.calendario.Name = "calendario";
+            this.calendario.Size = new System.Drawing.Size(99, 20);
+            this.calendario.TabIndex = 14;
+            this.calendario.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Enabled = false;
             this.label4.Location = new System.Drawing.Point(13, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Sorteo:";
             // 
-            // radioButton2
+            // radioAutomatico
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(61, 86);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 17);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.Text = "Automático";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioAutomatico.AutoSize = true;
+            this.radioAutomatico.Enabled = false;
+            this.radioAutomatico.Location = new System.Drawing.Point(61, 86);
+            this.radioAutomatico.Name = "radioAutomatico";
+            this.radioAutomatico.Size = new System.Drawing.Size(78, 17);
+            this.radioAutomatico.TabIndex = 12;
+            this.radioAutomatico.Text = "Automático";
+            this.radioAutomatico.UseVisualStyleBackColor = true;
+            this.radioAutomatico.CheckedChanged += new System.EventHandler(this.radioAutomatico_CheckedChanged);
             // 
-            // radioButton1
+            // radioManual
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(61, 63);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(60, 17);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Manual";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioManual.AutoSize = true;
+            this.radioManual.Checked = true;
+            this.radioManual.Enabled = false;
+            this.radioManual.Location = new System.Drawing.Point(61, 63);
+            this.radioManual.Name = "radioManual";
+            this.radioManual.Size = new System.Drawing.Size(60, 17);
+            this.radioManual.TabIndex = 11;
+            this.radioManual.TabStop = true;
+            this.radioManual.Text = "Manual";
+            this.radioManual.UseVisualStyleBackColor = true;
+            this.radioManual.CheckedChanged += new System.EventHandler(this.radioManual_CheckedChanged);
             // 
             // groupBoxResguardo
             // 
             this.groupBoxResguardo.Controls.Add(this.textBox1);
-            this.groupBoxResguardo.Controls.Add(this.button2);
-            this.groupBoxResguardo.Controls.Add(this.button1);
+            this.groupBoxResguardo.Controls.Add(this.botonSalir);
+            this.groupBoxResguardo.Controls.Add(this.botonApostar);
             this.groupBoxResguardo.Enabled = false;
             this.groupBoxResguardo.Location = new System.Drawing.Point(391, 13);
             this.groupBoxResguardo.Name = "groupBoxResguardo";
@@ -429,12 +438,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 226);
             this.Controls.Add(this.groupBoxResguardo);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxApuesta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Loterias DAM";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxApuesta.ResumeLayout(false);
+            this.groupBoxApuesta.PerformLayout();
             this.groupBoxResguardo.ResumeLayout(false);
             this.groupBoxResguardo.PerformLayout();
             this.ResumeLayout(false);
@@ -442,17 +451,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botonApostar;
+        private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox tipoApuesta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.GroupBox groupBoxApuesta;
+        private System.Windows.Forms.DateTimePicker calendario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton radioAutomatico;
+        private System.Windows.Forms.RadioButton radioManual;
+        private System.Windows.Forms.Button botonValidar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxResguardo;
         private System.Windows.Forms.TextBox textBox1;
