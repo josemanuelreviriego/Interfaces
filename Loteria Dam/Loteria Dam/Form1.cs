@@ -112,6 +112,15 @@ namespace Loteria_Dam
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (tipoApuesta.SelectedIndex.Equals(0))
+            {
+                imprime(4);
+            }else if (tipoApuesta.SelectedIndex.Equals(1)){
+                imprime(6);
+            }else{
+                imprime(8);
+            }
+
             groupBoxResguardo.Enabled = true;
             groupBoxApuesta.Enabled = false;
         }
@@ -179,6 +188,22 @@ namespace Loteria_Dam
 
         }
 
+        private void imprime(int maximo)
+        {
+            CheckBox[] arraycheck = new CheckBox[] {
+               checkBox1, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6, checkBox7,checkBox8,checkBox9,checkBox10,
+               checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16
+            };
+
+            int j = 1;
+
+            for (int i = 0; i < arraycheck.Length; i++)
+                if (arraycheck[i].Checked)
+                    listBox1.Items.AddRange(new object[] { "Numero " + (j++).ToString() + "  ->  " + (i + 1).ToString() });
+
+            listBox1.Items.AddRange(new object[] { "Reintegro  ==>  " + textReintegro.Text });
+        }
+
         private void radioAutomatico_CheckedChanged(object sender, EventArgs e)
         {
             Random r = new Random();
@@ -195,6 +220,7 @@ namespace Loteria_Dam
                     arraycheck[random.Next(1, 16)].Checked = true;
                     for (int a = 0; a < arraycheck.Length; a++)
                         arraycheck[a].Enabled = false;
+                    
                 }
             }
             else if (tipoApuesta.SelectedIndex == 1)

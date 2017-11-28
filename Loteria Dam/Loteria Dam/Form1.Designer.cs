@@ -59,7 +59,7 @@
             this.radioAutomatico = new System.Windows.Forms.RadioButton();
             this.radioManual = new System.Windows.Forms.RadioButton();
             this.groupBoxResguardo = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBoxApuesta.SuspendLayout();
             this.groupBoxResguardo.SuspendLayout();
             this.SuspendLayout();
@@ -413,7 +413,7 @@
             // 
             // groupBoxResguardo
             // 
-            this.groupBoxResguardo.Controls.Add(this.textBox1);
+            this.groupBoxResguardo.Controls.Add(this.listBox1);
             this.groupBoxResguardo.Controls.Add(this.botonSalir);
             this.groupBoxResguardo.Controls.Add(this.botonApostar);
             this.groupBoxResguardo.Enabled = false;
@@ -424,13 +424,13 @@
             this.groupBoxResguardo.TabStop = false;
             this.groupBoxResguardo.Text = "RESGUARDO";
             // 
-            // textBox1
+            // listBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 145);
-            this.textBox1.TabIndex = 0;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(18, 20);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(161, 147);
+            this.listBox1.TabIndex = 3;
             // 
             // Form1
             // 
@@ -445,7 +445,6 @@
             this.groupBoxApuesta.ResumeLayout(false);
             this.groupBoxApuesta.PerformLayout();
             this.groupBoxResguardo.ResumeLayout(false);
-            this.groupBoxResguardo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -464,7 +463,6 @@
         private System.Windows.Forms.Button botonValidar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxResguardo;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textReintegro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox16;
@@ -483,6 +481,7 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
